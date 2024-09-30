@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
+/* <!-- Author Coop_Dev -->
+<!-- https://github.com/coopwork -->
+<!-- https://github.com/coopwork/Animate_gallery --> */
+body{
+  background: #242424;
+  overflow-x: hidden;
+  font-family: 'Damion', cursive;
+}
+h1{
+  margin-top: 30px;
+  color: #f5f5f5;
+  text-align: center;
+}
+p{
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  color: #f5f5f5;
+  cursor: default;
+}
+p span{
+  background-color: #fc7609;
+  padding: 3px 2px;
+  border-radius: 5px;
+  margin: 0 3px;
+  color: #000;
+}
+p i{
+  font-style: normal;
+  background-color: #f5f5f5;
+  color: #000;
+  padding: 3px 2px;
+  border-radius: 5px;
+}
+p a{
+  color: tomato;
+  text-decoration: none;
+  cursor: pointer;
+}
+p a:hover{
+  color: yellow;
+}
+.gallery{
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  animation: slide_down 2.5s ease-in-out;
+}
+@keyframes slide_down {
+  0%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.gallery_wrapper{
+  display: flex;
+  height: 75vh;
+  align-items: center;
+}
+.photo_wrapper{
+  display: block;
+  position: relative;
+  width: 500px;
+  height: 700px;
+  overflow: hidden;
+  transition: .5s ease-in-out;
+  border: 2px #242424 solid;
+}
+.photo_wrapper span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 300px;
+  display: block;
+  background-color: #fff;
+  background: linear-gradient(0deg , #ffffff00 , #fff , #ffffff00);
+  z-index: 3;
+  animation: flash 5s infinite alternate-reverse;
+}
+@keyframes flash {
+  0%{
+    transform: translateX(-50%) translateY(-1200%);
+    opacity: .1;
+  }
+  50%{
+    opacity: .2;
+  }
+  100%{
+    transform: translateX(-50%) translateY(900%);
+    opacity: .1;
+  }
+}
+.photo_wrapper h3{
+  position: absolute;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  padding-top: 150%;
+  text-align: center;
+  z-index: 2;
+  background-color: #0000003a;
+  color: #fff;
+  letter-spacing: 1pt;
+  backdrop-filter: blur(2px);
+  transition: .4s;
+  cursor: default;
+}
+.photo_wrapper img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: saturate(20%) brightness(80%);
+  transition: 1s ease-in-out;
+}
+.photo_wrapper:hover img{
+  /* transform: scale(1.1); */
+  filter: none;
+  animation: 10s slide_anim ease-in-out alternate-reverse infinite;
+}
+.photo_wrapper:hover img .photo_wrapper span{
+  animation: none;
+}
+.photo_wrapper:hover{
+  width: 550px;
+  height: 750px;
+  /* transform: scale(1.1); */
+  z-index: 1;
+  box-shadow: 0 10px 10px 5px #0000003a;
+  margin: 0 5px;
+  border: none;
+  border: 2px #24242400 solid;
+}
+.photo_wrapper:active{
+  width: 100%;
+}
+.photo_wrapper:hover h3{
+  opacity: 0;
+  z-index: 0;
+}
+@keyframes slide_anim {
+  0%{
+    transform: translateX(0) scale(1);
+  }
+  25%{
+    transform: translateX(3%) scale(1.1);
+  }
+  50%{
+    transform: translateX(0%) scale(1.1);
+  }
+  75%{
+    transform: translateX(-3%) scale(1.1);
+  }
+  100%{
+    transform: translateX(0%) scale(1);
+  }
+}
+/* <!-- Author Coop_Dev -->
+<!-- https://github.com/coopwork -->
+<!-- https://github.com/coopwork/Animate_gallery --> */

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- https://boxicons.com/ <=== Get icons in this web site -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>SPA Responsive SideBar</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo_content">
+        <div class="logo">
+          <i class="bx bxl-squarespace"></i>
+          <div class="logo_name">Study Help</div>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+      </div>
+      <nav>
+        <ul class="nav_list">
+          <li>
+            <i class="bx bx-search"></i>
+            <input type="search" placeholder="Search..." />
+            <span class="tooltip">Search</span>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="bx bx-podcast"><span class="alerts">1</span></i>
+              <span class="links_name">Education flow</span>
+            </a>
+            <span class="tooltip">Education flow</span>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="bx bx-home-alt"><span class="alerts">0</span></i>
+              <span class="links_name">Home work</span>
+            </a>
+            <span class="tooltip">Home work</span>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="bx bx-buildings"><span class="alerts">0</span></i>
+              <span class="links_name">Offline space</span>
+            </a>
+            <span class="tooltip">Offline space</span>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="bx bx-line-chart"><span class="alerts">0</span></i>
+              <span class="links_name">Stats</span>
+            </a>
+            <span class="tooltip">Stats</span>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="bx bx-slideshow"><span class="alerts">0</span></i>
+              <span class="links_name">Video courses</span>
+            </a>
+            <span class="tooltip">Video courses</span>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="bx bx-message-alt-edit"
+                ><span class="alerts">0</span></i
+              >
+              <span class="links_name">Tasks</span>
+            </a>
+            <span class="tooltip">Tasks</span>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="bx bx-notepad"
+                ><span class="alerts sidebar_alert">9</span></i
+              >
+              <span class="links_name">Tests</span>
+            </a>
+            <span class="tooltip">Tests</span>
+          </li>
+
+          <li>
+            <a href="#">
+              <i class="bx bx-cog"><span class="alerts">1</span></i>
+              <span class="links_name">Settings</span>
+            </a>
+            <span class="tooltip">Settings</span>
+          </li>
+        </ul>
+
+        <div class="profile_content">
+          <div class="profile">
+            <div class="profile_details">
+              <img src="https://picsum.photos/200" alt="" />
+              <div class="name_role">
+                <div class="name">Muhtarkhan</div>
+                <div class="role">Administrator</div>
+              </div>
+            </div>
+            <i class="bx bx-log-out" id="log_out"></i>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="upbar__components">
+      <div class="notifications__bar">
+        <button
+          id="notification_btn"
+          onclick="notificationsCloseOpen()"
+          class="icon__notification"
+        >
+          <span id="notification_circle"></span>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.1459 3.24792C10.2953 2.87864 10.5516 2.56238 10.8819 2.3397C11.2122 2.11701 11.6015 1.99805 11.9999 1.99805C12.3983 1.99805 12.7876 2.11701 13.1179 2.3397C13.4482 2.56238 13.7045 2.87864 13.8539 3.24792C15.3327 3.65461 16.637 4.53548 17.5667 5.75526C18.4963 6.97504 18.9998 8.46627 18.9999 9.99992V14.6969L20.8319 17.4449C20.9324 17.5955 20.9901 17.7706 20.9989 17.9514C21.0077 18.1322 20.9672 18.3121 20.8818 18.4717C20.7964 18.6313 20.6692 18.7648 20.5139 18.8578C20.3586 18.9508 20.1809 19 19.9999 18.9999H15.4649C15.3445 19.833 14.928 20.5949 14.2916 21.1459C13.6552 21.6969 12.8417 22.0001 11.9999 22.0001C11.1581 22.0001 10.3446 21.6969 9.7082 21.1459C9.07184 20.5949 8.65531 19.833 8.53491 18.9999H3.99991C3.81886 19 3.64121 18.9508 3.4859 18.8578C3.33058 18.7648 3.20344 18.6313 3.11803 18.4717C3.03262 18.3121 2.99215 18.1322 3.00093 17.9514C3.00972 17.7706 3.06743 17.5955 3.16791 17.4449L4.99991 14.6969V9.99992C4.99991 6.77592 7.17991 4.05992 10.1459 3.24792ZM10.5859 18.9999C10.6892 19.2926 10.8807 19.546 11.134 19.7252C11.3874 19.9045 11.6901 20.0007 12.0004 20.0007C12.3107 20.0007 12.6134 19.9045 12.8668 19.7252C13.1201 19.546 13.3116 19.2926 13.4149 18.9999H10.5849H10.5859ZM11.9999 4.99992C10.6738 4.99992 9.40205 5.52671 8.46437 6.46439C7.52669 7.40207 6.99991 8.67384 6.99991 9.99992V14.9999C6.99995 15.1975 6.94149 15.3906 6.83191 15.5549L5.86891 16.9999H18.1299L17.1669 15.5549C17.0577 15.3905 16.9996 15.1974 16.9999 14.9999V9.99992C16.9999 8.67384 16.4731 7.40207 15.5354 6.46439C14.5978 5.52671 13.326 4.99992 11.9999 4.99992V4.99992Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+
+        <button id="message_button" class="icon__notification">
+          <span id="notification_circle"></span>
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              class="dot1"
+              d="M12 13C12.5523 13 13 12.5523 13 12C13 11.4477 12.5523 11 12 11C11.4477 11 11 11.4477 11 12C11 12.5523 11.4477 13 12 13Z"
+              fill="white"
+            />
+            <path
+              class="dot2"
+              d="M16 13C16.5523 13 17 12.5523 17 12C17 11.4477 16.5523 11 16 11C15.4477 11 15 11.4477 15 12C15 12.5523 15.4477 13 16 13Z"
+              fill="white"
+            />
+            <path
+              class="dot3"
+              d="M8 13C8.55228 13 9 12.5523 9 12C9 11.4477 8.55228 11 8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13Z"
+              fill="white"
+            />
+            <path
+              d="M19.0701 4.93002C17.4293 3.27852 15.2638 2.25124 12.9467 2.02526C10.6297 1.79929 8.30647 2.3888 6.3775 3.69215C4.44854 4.99551 3.03475 6.93103 2.37988 9.16503C1.72501 11.399 1.87009 13.7915 2.79012 15.93C2.88601 16.1288 2.91747 16.3525 2.88012 16.57L2.00012 20.8C1.96621 20.9622 1.97314 21.1303 2.02027 21.2891C2.06739 21.4479 2.15325 21.5926 2.27012 21.71C2.36592 21.8051 2.47999 21.8799 2.60545 21.9297C2.73091 21.9795 2.86516 22.0035 3.00012 22H3.20012L7.48012 21.14C7.69765 21.1139 7.91824 21.1449 8.12012 21.23C10.2586 22.15 12.6511 22.2951 14.8851 21.6403C17.1191 20.9854 19.0546 19.5716 20.358 17.6426C21.6613 15.7137 22.2508 13.3904 22.0249 11.0734C21.7989 8.75638 20.7716 6.59081 19.1201 4.95002L19.0701 4.93002ZM19.9001 13.29C19.7046 14.484 19.2408 15.6181 18.5437 16.6069C17.8465 17.5958 16.9342 18.4136 15.8753 18.9989C14.8164 19.5842 13.6385 19.9216 12.4303 19.9859C11.2222 20.0502 10.0151 19.8396 8.90012 19.37C8.50466 19.2018 8.07985 19.1135 7.65012 19.11C7.4624 19.1113 7.2751 19.1281 7.09012 19.16L4.27012 19.73L4.84012 16.91C4.95364 16.2993 4.88046 15.6685 4.63012 15.1C4.16051 13.985 3.94992 12.778 4.01421 11.5698C4.0785 10.3616 4.41598 9.18377 5.00126 8.12487C5.58654 7.06598 6.40438 6.15362 7.39321 5.45647C8.38205 4.75932 9.51614 4.29554 10.7101 4.10002C11.9634 3.89434 13.2476 3.99 14.4566 4.37908C15.6656 4.76817 16.7645 5.43951 17.6626 6.33756C18.5606 7.23561 19.232 8.33457 19.6211 9.54354C20.0101 10.7525 20.1058 12.0367 19.9001 13.29V13.29Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div id="notifications_window" class="notifications_window display__none">
+        <div class="notification">
+          <span></span>
+          <h4>Title</h4>
+          <p>Text in message <b>bold style</b> and regular</p>
+          <button class="close">&#215;</button>
+        </div>
+
+        <div class="notification">
+          <span></span>
+          <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+            animi quae dicta.
+          </p>
+          <button class="close">&#215;</button>
+        </div>
+
+        <div class="notification">
+          <span></span>
+          <h4>Заголовок</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <b>Recusandae, odit saepe</b> Maxime ut cumque.
+          </p>
+          <button class="close">&#215;</button>
+        </div>
+
+        <div id="notificationsnone" class="notification notifications_none">
+          <span></span>
+          <h3>Уведомлений нету!</h3>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/upbar_notifications.js"></script>
+
+    <main class="main_content">
+      <div class="content">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+          quibusdam ab libero nemo excepturi dolorem provident totam dolor
+          laborum consequatur, deleniti officia, sit perferendis culpa
+          dignissimos non iure. Non, at. Corporis optio voluptas culpa? In,
+          debitis ex. Beatae neque optio veniam magnam unde iure iste quo
+          cumque. Ex animi tenetur itaque reprehenderit saepe veniam, omnis ab
+          labore blanditiis quasi voluptatem. Odio necessitatibus id quam minima
+          rerum! Suscipit veritatis hic explicabo rerum ab doloremque porro
+          vero. Explicabo nesciunt cupiditate placeat repellat aperiam at sequi
+          adipisci tempore sed dolores! Neque, voluptatum voluptas. Modi enim
+          voluptate iusto excepturi atque quas illum ipsam sapiente eos eveniet,
+          mollitia quidem aperiam? Eaque repellat enim omnis unde eum
+          reprehenderit, eveniet velit qui veritatis nihil accusamus molestias
+          hic! Fuga a ipsam delectus similique necessitatibus cupiditate iste
+          dolore libero ex culpa. Fugit itaque iusto labore ea ullam at minima
+          perspiciatis? Consequatur magnam pariatur nostrum ad aspernatur nihil
+          atque numquam.
+        </p>
+        <h1>Header</h1>
+        Main Content
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione
+          aliquid ad eius facere? Neque maxime quisquam eos illo quam
+          consectetur nostrum tempore, provident magnam, odio ratione?
+          Consectetur corporis voluptates dolorem. Necessitatibus accusantium
+          omnis natus corrupti delectus? Sapiente quasi, eos nulla quis, ducimus
+          sequi ut cumque autem fugit accusantium vitae saepe. Laboriosam nam
+          voluptas impedit. Vero ipsum dolores excepturi aliquid delectus. Autem
+          tempore recusandae facere vero eveniet ullam excepturi corporis
+          voluptate perferendis dolore, fugiat veritatis nemo dicta, eius ipsam
+          porro esse! Impedit qui sint amet, recusandae magni voluptatibus.
+          Adipisci, similique? Odit! Tempora blanditiis consectetur consequuntur
+          tenetur ad accusamus culpa earum veritatis adipisci beatae? Autem
+          officiis quisquam perferendis voluptates a incidunt eius. Deserunt
+          iste id reprehenderit voluptates cumque! Aut blanditiis cumque ea.
+          Architecto nihil repudiandae, reiciendis nam sapiente accusantium
+          debitis saepe beatae qui omnis sed nemo non, ducimus, eveniet autem
+          magnam iste earum officia sunt. Quidem dolore itaque deleniti, sequi
+          quibusdam cupiditate. Doloribus dolores commodi architecto sunt
+          sapiente accusamus quisquam cum cupiditate nostrum, beatae impedit
+          natus aperiam necessitatibus quae id animi culpa numquam dignissimos
+          fuga itaque ab, eligendi aut hic amet. Quas! Dolores quisquam
+          doloribus necessitatibus quis quos magnam, vitae, voluptatem
+          exercitationem praesentium ullam quo quia asperiores, quas fuga sit
+          labore. Nobis, non. Obcaecati recusandae delectus possimus
+          necessitatibus mollitia porro maiores officia. Eum ipsa quisquam enim
+          consectetur ad, quam temporibus nisi assumenda libero ratione
+          recusandae esse cupiditate rem in atque alias, sapiente
+          exercitationem. Veritatis provident ducimus aliquam quas odit
+          perferendis. Totam, voluptatum.
+        </p>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

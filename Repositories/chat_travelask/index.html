@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Test Task</title>
+</head>
+<body>
+
+<button id="open_chat" class="open_chat_button close_window">Открыть чат</button>
+
+
+<!----------------------- CHAT ----------------------->
+<div id="window_chat" class="window__chat">
+<!-- UP DECORATION SKEWBOXES -->
+  <div class="chat_up_decoration">
+    <span class="decoration_red"></span>
+    <span class="decoration_blue"></span>
+    <span class="decoration_red"></span>
+    <span class="decoration_blue"></span>
+    <span class="decoration_red"></span>
+    <span class="decoration_blue"></span>
+    <span class="decoration_red"></span>
+    <span class="decoration_blue"></span>
+    <span class="decoration_red"></span>
+    <span class="decoration_blue"></span>
+    <span class="decoration_red"></span>
+    <span class="decoration_blue"></span>
+    <span class="decoration_red"></span>
+    <span class="decoration_blue"></span>
+    <span class="decoration_red"></span>
+    <span class="decoration_blue"></span>
+    <span class="decoration_red"></span>
+    <span class="decoration_blue"></span>
+    <span class="decoration_red"></span>
+    <span class="decoration_blue"></span>
+    <span class="decoration_red"></span>
+    <span class="decoration_blue"></span>
+    <span class="decoration_red"></span>
+    <span class="decoration_blue"></span>
+    <span class="decoration_red"></span>
+    <span class="decoration_blue"></span>
+    <span class="decoration_red"></span>
+    <span class="decoration_blue"></span>
+    <span class="decoration_red"></span>
+    <span class="decoration_blue"></span>
+    <span class="decoration_red"></span>
+    <span class="decoration_blue"></span>
+    <span class="decoration_red"></span>
+    <span class="decoration_blue"></span>
+  </div>
+<!-- /UP DECORATION SKEWBOXES -->
+
+<!--------------- CHAT COMPANION USER INFO -------------->
+  <div class="chat_up_block">
+<!-- LEFT BLOCK -->
+    <div class="chat__companion">
+      <img src="img/avatars/avatar1.jpg" alt="">
+      <div class="chat__companion_info">
+        <a class="companion__name" href="#">Токсикова Ольга</a>
+        <p class="companion_city">Днепропетровск</p>
+      </div>
+    </div>
+<!-- RIGHT BLOCK -->
+    <div class="chat_up_right">
+      <div class="chat__stars">
+
+        <div class="rating-area">
+          <input type="radio" id="star-5" name="rating" value="5">
+          <label for="star-5" title="Оценка «5»"></label>
+          <input type="radio" id="star-4" name="rating" value="4">
+          <label for="star-4" title="Оценка «4»"></label>
+          <input type="radio" id="star-3" name="rating" value="3">
+          <label for="star-3" title="Оценка «3»"></label>
+          <input type="radio" id="star-2" name="rating" value="2">
+          <label for="star-2" title="Оценка «2»"></label>
+          <input type="radio" id="star-1" name="rating" value="1">
+          <label for="star-1" title="Оценка «1»"></label>
+        </div>
+
+      </div>
+      <div class="chat__close">
+        <a id="close_chat" href="#">X</a>
+      </div>
+    </div>
+<!-- END -->
+  </div>
+
+  <script src="js/close.js"></script>
+<!--------------- /CHAT COMPANION USER INFO -------------->
+
+<!--------------- DIALOG WINDOW -------------->
+<div id="dialog" class="dialog__window">
+<!-- message 1 -->
+<div class="dialog__message">
+  <div class="message_avatar_wrapper">
+    <img src="img/avatars/avatar1.jpg" alt="">
+  </div>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque illum laudantium enim eum dolorem reprehenderit nam, <a href="#">rem vitae id suscipit</a>, quibusdam ullam odit voluptatem excepturi deserunt eius iste ipsa consequatur.
+  </p>
+  <time datetime="2021-08-04 22:30">Вчера в 22:30</time>
+</div>
+<!-- message end -->
+<!-- message 2 -->
+<div class="dialog__message">
+  <div class="message_avatar_wrapper">
+    <img src="img/avatars/avatar2.jpg" alt="">
+  </div>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque illum laudantium enim eum dolorem reprehenderit nam, rem vitae id suscipit, quibusdam ullam odit voluptatem excepturi deserunt eius iste ipsa consequatur.
+  </p>
+  <time datetime="2021-08-04 22:30">Вчера в 22:30</time>
+</div>
+<!-- message end -->
+<!-- message 3 -->
+<div class="dialog__message">
+  <div class="message_avatar_wrapper">
+    <img src="img/avatars/avatar1.jpg" alt="">
+  </div>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque illum laudantium enim eum dolorem reprehenderit nam, rem vitae id suscipit, quibusdam ullam odit voluptatem excepturi deserunt eius iste ipsa consequatur.
+  </p>
+  <time datetime="2021-08-04 22:30">Вчера в 22:30</time>
+</div>
+<!-- message end -->
+<!-- message 4 -->
+<div class="dialog__message">
+  <div class="message_avatar_wrapper">
+    <img src="img/avatars/avatar2.jpg" alt="">
+  </div>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque illum laudantium enim eum dolorem reprehenderit nam, rem vitae id suscipit, quibusdam ullam odit voluptatem excepturi deserunt eius iste ipsa consequatur.
+  </p>
+  <time datetime="2021-08-04 22:30">Вчера в 22:30</time>
+</div>
+<!-- message end -->
+<!-- message 5 -->
+<div class="dialog__message m-last">
+  <div class="message_avatar_wrapper">
+    <img src="img/avatars/avatar1.jpg" alt="">
+  </div>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque illum laudantium enim eum dolorem reprehenderit nam, rem vitae id suscipit, quibusdam ullam odit voluptatem excepturi deserunt eius iste ipsa consequatur.
+  </p>
+  <time datetime="2021-08-04 22:30">Вчера в 22:30</time>
+</div>
+<!-- message end -->
+
+
+</div>
+<script src="js/scroll.js"></script>
+<!--------------- /DIALOG WINDOW -------------->
+
+<!--------------- SEND FORM -------------->
+<div class="send__form">
+
+  <img src="img/avatars/avatar2.jpg" alt="">
+
+  <form class="send__inputs" action="">
+    <textarea oninput="auto_grow(this)" name="" id=""></textarea>
+    <button>Отправить</button>
+  </form>
+
+<script src="js/textarea.js"></script>
+</div>
+<!--------------- /SEND FORM -------------->
+
+
+
+
+</div>
+
+
+</body>
+</html>
