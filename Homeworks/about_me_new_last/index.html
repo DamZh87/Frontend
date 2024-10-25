@@ -676,7 +676,7 @@
                            data-sitekey="6Lf2E2wqAAAAAMKFejEmyZPKcU_RtseLt8mI7nm3"
                            data-callback="onSubmit"
                            data-action="submit"
-                           type="submit "
+                           type="submit"
                         >
                            Отправить
                         </button>
@@ -724,7 +724,11 @@
          </div>
       </footer>
      
-
+      <script>
+        function onSubmit(token) {
+          document.getElementById("contact_form").submit();
+        }
+      </script>
       <script
          src="https://s.pageclip.co/v1/pageclip.js"
          charset="utf-8"
