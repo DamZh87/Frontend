@@ -581,7 +581,7 @@
                <form
                   action="https://send.pageclip.co/Vu1xhOTiLHv72oDi7DSa7KBfjLKItMd2"
                   method="post"
-                  class="contact_form"
+                  class="contact_form pageclip-form"
                >
                   <div class="md:flex md:items-center mb-6">
                      <div class="md:w-1/3">
@@ -598,7 +598,7 @@
                            class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-[#2563EB]"
                            id="name"
                            type="text"
-                           name="name"
+                           name="Имя"
                            placeholder="Введите Ваше имя"
                         />
                      </div>
@@ -638,6 +638,7 @@
                            class="form__input bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-[#2563EB]"
                            id="phone"
                            type="tel"
+                           name="Телефон"
                            placeholder="Введите номер"
                         />
                      </div>
@@ -658,6 +659,7 @@
                            id="message"
                            type="text"
                            placeholder="Введите сообщение"
+                           name="Сообщение"
                         ></textarea>
                      </div>
                   </div>
@@ -666,7 +668,7 @@
                      <div class="md:w-1/3"></div>
                      <div class="md:w-2/3">
                         <button
-                           class="shadow bg-[#2563EB] hover:bg-[#286CFF] focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+                           class="pageclip-form__submit shadow bg-[#2563EB] hover:bg-[#286CFF] focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                            type="submit"
                         >
                            Отправить
@@ -678,20 +680,7 @@
          </div>
       </div>
 
-      <form
-         action="https://send.pageclip.co/Vu1xhOTiLHv72oDi7DSa7KBfjLKItMd2"
-         class="pageclip-form"
-         method="post"
-      >
-         <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
-         <input type="text" name="name" value="Roscoe Jones" />
-         <input type="email" name="email" value="roscoe@example.com" />
-
-         <!-- This button will have a loading spinner. Keep the inner span for best results. -->
-         <button type="submit" class="pageclip-form__submit">
-            <span>Send</span>
-         </button>
-      </form>
+    
 
       <footer>
          <div class="container">
