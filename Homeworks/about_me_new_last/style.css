@@ -46,7 +46,6 @@ header {
    padding: 0.75rem 0;
    z-index: 10;
    color: var(--text-color);
-  
 }
 
 header .header__wrapper {
@@ -119,7 +118,8 @@ input[type="checkbox"] {
    display: flex;
    justify-content: space-around;
    align-items: center;
-   min-height: calc(100vh - 5rem);
+   /* min-height: calc(100vh - 5rem); */
+
    flex-wrap: wrap;
 }
 .about__photo {
@@ -156,25 +156,29 @@ input[type="checkbox"] {
    padding-top: 5rem;
    grid-template-rows: auto;
    align-items: stretch;
-   min-height: calc(100vh - 5rem);
+   /* min-height: calc(100vh - 5rem); */
+   min-height: fit-content;
 }
 
 .h1_other {
    text-align: center;
    padding-bottom: 1rem;
-   font-size: clamp(22px, 2vw, 36px);
+   font-size: clamp(22px, 1.8vw, 34px);
    font-weight: 700;
    text-transform: uppercase;
 }
 
 .skills {
+   display: grid;
    grid-template-columns: 1fr 1fr 1fr;
+   gap: 1rem;
    & p {
       padding-top: 3rem;
    }
 }
 .projects {
    display: grid;
+   gap: 1rem;
    grid-template-columns: 1fr 1fr 1fr 1fr;
    & p {
       padding-top: 2rem;
@@ -185,11 +189,12 @@ input[type="checkbox"] {
 .project {
    grid-row: 1;
    padding: 1rem;
-   margin: 1rem;
-   height: fit-content;
+   /* height: fit-content; */
+   height: 100%;
    max-width: 100%;
    -webkit-transition: 0.5s ease;
    -moz-transition: 0.5s ease;
+
    &:hover {
       transform: scale(1.03);
       opacity: 80%;
@@ -220,6 +225,43 @@ footer {
    max-height: 3rem;
 }
 
+.footer__wrapper {
+   display: flex;
+   justify-content: space-around;
+}
+
+.empty {
+   flex-shrink: 1;
+   width: 25%;
+}
+.copy {
+   flex-shrink: 2;
+   width: 50%;
+   align-self: center;
+}
+.social {
+   display: flex;
+   justify-content: center;
+   flex-shrink: 1;
+  
+   width: 25%;
+}
+
+.social__icon {
+   width: 1.8vh;
+   fill: var(--button-color);
+   margin: 10px;
+ 
+   &:hover {
+      
+      opacity: 80%;
+      transform: scale(1.05);
+      transition: ease-in-out 0.5s;
+   }
+}
+
+
+
 @media screen and (max-width: 1024px) {
    .about,
    .skills,
@@ -245,6 +287,7 @@ footer {
 label :hover {
    transform: scale(1.1);
    opacity: 80%;
+
    transition: ease-in-out 0.3s;
 }
 .text_justify {
@@ -292,7 +335,7 @@ label :hover {
       padding: 0;
    }
    .about__text {
-      padding: 0.1rem;
+      padding: 1rem;
    }
    .skill,
    .project {
