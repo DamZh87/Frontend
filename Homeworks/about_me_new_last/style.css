@@ -260,7 +260,10 @@ footer {
    }
 }
 
-
+.h-captcha{
+ display: flex;
+ justify-content: end;
+}
 
 @media screen and (max-width: 1024px) {
    .about,
