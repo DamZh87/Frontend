@@ -1,36 +1,39 @@
 
 
-const identify = document.querySelector('#identify')
-const firstName = document.querySelector('#first-name')
-const lastName = document.querySelector('#last-name')
-const email = document.querySelector('#e-mail')
 
 
-
-
-
-
-const user = {
-    id: identify.value,
-    firstName: 'Jack',
-    lastName: 'Black',
-    email: 'jack-black@gmail.com'
-  };
 
 document.querySelector('#write').addEventListener('click', ()=>{
-    localStorage.setItem('id', identify.value );
-    localStorage.setItem('firstName', firstName.value );
-    localStorage.setItem('lastName', lastName .value );
-    localStorage.setItem('email', email.value )
+   
+   console.log('Записать в Local Storage');
+   
+   const identify = document.querySelector('#identify');
+   const firstName = document.querySelector('#first-name');
+   const lastName = document.querySelector('#last-name');
+   const email = document.querySelector('#e-mail');
+
+   const user = {
+       id: identify.value,
+       firstName: firstName.value,
+       lastName: lastName.value,
+       email: email.value
+     };
+//console.log(user);
+localStorage.setItem('user', user)
+   
 
 })
 
 
 
 document.querySelector('#read').addEventListener('click', ()=>{
-    // console.log('Получить');
+    // console.log('Получить из Local Storage');
 
-console.log(user);
+  
+
+console.log(localStorage.getItem('user'));
+
+   
 
 
 
