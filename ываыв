@@ -1,0 +1,13 @@
+const identify = document.querySelector('#identify')
+const firstName = document.querySelector('#first-name')
+const lastName = document.querySelector('#last-name')
+const email = document.querySelector('#e-mail')
+
+const user = {
+    id: identify.value,
+    firstName: 'Jack',
+    lastName: 'Black',
+    email: 'jack-black@gmail.com'
+  };
+
+  console.log(user);
