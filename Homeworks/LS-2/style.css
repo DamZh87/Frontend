@@ -4,21 +4,11 @@
     box-sizing: border-box;
 }
 
-.form__data{
-    margin: 5%;
-    width: 50vw;
+.container{
+    margin-top: 4rem;
+    width: 60%;
     justify-self: center;
-    align-items: center;
     display: flex;
-    flex-direction: column;
-    
-}
+    justify-content:center ;
 
-.form__buttons{
-    
-    width: 50vw;
-    justify-self: center;
-    justify-content:space-around;
-    display: flex;
-    
 }

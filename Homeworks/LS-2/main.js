@@ -1,45 +1,36 @@
-
-
-
-
-
+//Добавить
 document.querySelector('#write').addEventListener('click', ()=>{
-   
-   console.log('Записать в Local Storage');
-   
-   const identify = document.querySelector('#identify');
-   const firstName = document.querySelector('#first-name');
-   const lastName = document.querySelector('#last-name');
-   const email = document.querySelector('#e-mail');
-
-   const user = {
-       id: identify.value,
-       firstName: firstName.value,
-       lastName: lastName.value,
-       email: email.value
-     };
-//console.log(user);
-localStorage.setItem('user', user)
-   
-
-})
-
-
-
-document.querySelector('#read').addEventListener('click', ()=>{
-    // console.log('Получить из Local Storage');
-
   
-
-console.log(localStorage.getItem('user'));
-
+    const user = {
+       id: identify = document.querySelector('#identify').value,
+       firstName: firstName = document.querySelector('#first-name').value,
+       lastName: lastName = document.querySelector('#last-name').value,
+       email: document.querySelector('#e-mail').value
+     };
    
-
-
+    localStorage.setItem('user', JSON.stringify(user)) ;//Так считается одна строка?
 
 })
 
-document.querySelector('#clear').addEventListener('click', ()=>{
-    localStorage.clear();
 
+
+//Достать
+document.querySelector('#read').addEventListener('click', ()=>{
+      
+    const user = JSON.parse(localStorage.getItem("user")); //Так считается одна строка?
+
+    document.querySelector('#identify').value = user.id;
+    document.querySelector('#first-name').value = user.firstName;
+    document.querySelector('#last-name').value = user.lastName;
+    document.querySelector('#e-mail').value = user.email
+})
+
+
+
+//Очистить
+document.querySelector('#clear').addEventListener('click', ()=>{
+    if
+    (confirm('Вы уверены?')===true){
+    localStorage.clear()
+    }
 })
