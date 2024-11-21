@@ -30,7 +30,7 @@ document.querySelector('#read').addEventListener('click', ()=>{
 //Очистить
 document.querySelector('#clear').addEventListener('click', ()=>{
     if
-    (confirm('Вы уверены?')===true){
+    (confirm('Вы уверены?')){
     localStorage.clear()
     }
 })
