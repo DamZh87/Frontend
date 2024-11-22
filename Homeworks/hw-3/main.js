@@ -1,207 +1,11 @@
 
+import { shopItems, useShopItems, getCatalog, filterSelect, poorItemsRemoveCheckbox } from './get.js';
 
-// const shopItems = [
-//   {
-//     title: 'Samsung Galaxy',
-//     quantity: 14,
-//     description: 'It\'s a new smartphone',
-//     price: 500,
-//   },
-//   {
-//     title: 'Apple iPhone 14',
-//     quantity: 10,
-//     description: 'Latest Apple smartphone with advanced features',
-//     price: 1000,
-//   },
-//   {
-//     title: 'Dell XPS 15',
-//     quantity: 5,
-//     description: 'High-performance laptop with sleek design',
-//     price: 1500,
-//   },
-//   {
-//     title: 'Sony WH-1000XM4',
-//     quantity: 20,
-//     description: 'Noise-canceling over-ear headphones',
-//     price: 300,
-//   },
-//   {
-//     title: 'Google Pixel 7',
-//     quantity: 8,
-//     description: 'Smartphone with excellent camera capabilities',
-//     price: 700,
-//   },
-//   {
-//     title: 'LG OLED TV 55"',
-//     quantity: 3,
-//     description: '4K UHD Smart OLED TV with stunning visuals',
-//     price: 1200,
-//   },
-//   {
-//     title: 'Amazon Echo Dot',
-//     quantity: 25,
-//     description: 'Smart speaker with Alexa voice assistant',
-//     price: 50,
-//   },
-//   {
-//     title: 'Nintendo Switch',
-//     quantity: 12,
-//     description: 'Hybrid gaming console for home and on-the-go',
-//     price: 350,
-//   },
-//   {
-//     title: 'Bose SoundLink Revolve',
-//     quantity: 15,
-//     description: 'Portable Bluetooth speaker with 360° sound',
-//     price: 200,
-//   },
-//   {
-//     title: 'Apple MacBook Air M2',
-//     quantity: 7,
-//     description: 'Lightweight and powerful laptop with M2 chip',
-//     price: 1100,
-//   },
-//   {
-//     title: 'Samsung Galaxy Watch 5',
-//     quantity: 9,
-//     description: 'Smartwatch with fitness tracking features',
-//     price: 250,
-//   },
-//   {
-//     title: 'HP Envy Printer',
-//     quantity: 6,
-//     description: 'Wireless all-in-one color printer',
-//     price: 180,
-//   },
-//   {
-//     title: 'Logitech MX Master 3',
-//     quantity: 18,
-//     description: 'Ergonomic wireless mouse for professionals',
-//     price: 100,
-//   },
-//   {
-//     title: 'Sony PlayStation 5',
-//     quantity: 4,
-//     description: 'Next-generation gaming console',
-//     price: 500,
-//   },
-//   {
-//     title: 'GoPro HERO11 Black',
-//     quantity: 10,
-//     description: 'Waterproof action camera for adventure',
-//     price: 400,
-//   },
-// ];
+document.addEventListener('DOMContentLoaded', () => {
+
+useShopItems();  
 
 
-
-// fetch('./shop-items.json')
-//   .then((response) => {
-//     if (response.status === 404) {
-//       PromiseRejectionEvent()
-//     }
-//     return response.json()
-//   })
-//   .then((json) => {
-//     console.log(json)
-   
-
-
-//   const shopItems = JSON.stringify(json)
-//   console.log(shopItems)
-
-// })
-
-
-// async function getShopItems() {
-//   const response = await fetch('./shop-items.json');
-//   const json = await response.json();
-
-//   if (response.status !== 200) {
-//     console.log('ERROR');
-//     return
-//   }
-
-//   return json;
-    
-// }
-
-
-
-// async function useShopItems() {
-//    shopItems = JSON.stringify (await getShopItems());
-
-//    console.log(shopItems);
-// }
-
-// useShopItems();
-
-
-fetch('./shop-items.json')
-  .then((response) => {
-    if (response.status === 404) {
-      PromiseRejectionEvent()
-    }
-    return response.json()
-  })
-  .then((json) => {
-    const shopItem =JSON.stringify(json);
-      console.log('All Ok');
-  })
-  
-  console.log(shopItem)
-
-
-
-
-
-
-const catalogEl = document.querySelector('.catalog');
-const filterSelect = document.querySelector('#shop_filter');
-const poorItemsRemoveCheckbox = document.querySelector('#removePoorItems');
-
-function renderCatalogItemCard({
-  title = '',
-  quantity = '',
-  description = '',
-  price = ''
-}) {
-  const card = document.createElement('article');
-  const titleEl = document.createElement('h3');
-  const quantityEl = document.createElement('small');
-  const descriptionEl = document.createElement('p');
-  const priceEl = document.createElement('p');
-  
-  card.className = 'catalog__item'
-
-  titleEl.textContent = title;
-  quantityEl.textContent = `Осталось: ${quantity} шт.`;
-  descriptionEl.textContent = description;
-  priceEl.textContent = `Цена: ${price}$`;
-
-  card.appendChild(titleEl)
-  card.appendChild(quantityEl)
-  card.appendChild(descriptionEl)
-  card.appendChild(priceEl)
-
-  return card;
-}
-
-
-function getCatalog(catalog) {
-  catalogEl.innerHTML = ''
-  catalog.forEach(item => {
-    const card = renderCatalogItemCard(item)
-  
-    catalogEl.appendChild(card)
-  });
-}
-
-
-
-
-
-getCatalog(shopItems);
 
 filterSelect.addEventListener('input', (e)=>{
   const {value} = e.target;
@@ -237,8 +41,9 @@ filterSelect.addEventListener('input', (e)=>{
     getCatalog(shopItems);
   }
   
-  getCatalog(shopItems);
+  
 })
+
 
 
 poorItemsRemoveCheckbox.addEventListener('input', (e)=>{
@@ -247,10 +52,7 @@ poorItemsRemoveCheckbox.addEventListener('input', (e)=>{
   if (checked) {
     const filteredPoorItems = [...shopItems].filter((catalogItem)=> catalogItem.price >= 500)
     getCatalog(filteredPoorItems)
-
-    // console.log(filteredPoorItems);
-    
-
+   
     filterSelect.addEventListener('input', (e)=>{
       const {value} = e.target;
       const initialItems = [...filteredPoorItems];
@@ -282,18 +84,16 @@ poorItemsRemoveCheckbox.addEventListener('input', (e)=>{
         return getCatalog(sortedStorageMax);
       }
       if (value === 'default') {
-        getCatalog(shopItems);
+        getCatalog(filteredPoorItems);
       }
       
-      getCatalog(shopItems);
+     
     })
     
-
   } else {
-    getCatalog(shopItems);
-
-
-
+    
+   
+    
 filterSelect.addEventListener('input', (e)=>{
   const {value} = e.target;
   const initialItems = [...shopItems];
@@ -327,13 +127,19 @@ filterSelect.addEventListener('input', (e)=>{
   if (value === 'default') {
     getCatalog(shopItems);
   }
-  
-  getCatalog(shopItems);
 })
+
+getCatalog(shopItems);
+
 
   }
   
 })
+
+
+
+
+});
 
 // ДЗ: Доработать фильтрацию и сортировку чтобы они работали вместе
 // Доп. будет плюсом к ДЗ: 
