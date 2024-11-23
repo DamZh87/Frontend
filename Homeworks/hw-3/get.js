@@ -19,6 +19,8 @@ export function renderCatalogItemCard({
   
   card.className = 'catalog__item'
   titleEl.className = 'card__title'
+  quantityEl.className = 'card__quantity'
+  priceEl.className = 'card__price'
 
   titleEl.textContent = title;
   quantityEl.textContent = `Осталось: ${quantity} шт.`;
