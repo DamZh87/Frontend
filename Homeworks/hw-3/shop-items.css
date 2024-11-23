@@ -1,11 +1,21 @@
-.catalog{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+.catalog {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content:flex-start;
+   gap: 1rem;
 }
 
-.catalog__item{
-  padding: 1.5rem;
-  border: 1px solid #000;
-  border-radius: 1rem;
+.catalog__item {
+ 
+   background-color: #ededed;
+   border-radius: 10px;
+   border: 2px solid #c5d1f3;
+   padding: 10px;
+   min-width: 25rem;
+   max-width: 100%;
+   box-shadow: 0 0 10px 3px #1e2f5d18;
+}
+
+.card__title{
+  font-size: 1.5rem ;
 }
