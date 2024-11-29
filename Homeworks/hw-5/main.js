@@ -28,12 +28,14 @@ function renderUserCard({
     name = '',
     username = '',
     email	 = '',
+    address = '',
 }) 
     {
     const card = document.createElement('article');
     const nameEl = document.createElement('h3');
     const usernameEl = document.createElement('h3');
     const emailEl = document.createElement('h3');
+    const addressEl = document.createElement('h3');
     
     
     card.className = 'user__card'
@@ -42,10 +44,12 @@ function renderUserCard({
     nameEl.textContent = name;
     usernameEl.textContent = `Имя пользователя: ${username}`;
     emailEl.textContent = email;
+    addressEl.textContent = JSON.stringify(address.city);
      
     card.appendChild(nameEl)
     card.appendChild(usernameEl)
     card.appendChild(emailEl)
+    card.appendChild(addressEl)
 
     return card;
   }
@@ -63,6 +67,8 @@ function renderUserCard({
   try {
    const responseGet = await request.get('/users');
    getUserList(responseGet);
+   console.log(responseGet);
+   
     
     } catch (error) {
     console.error('Request error:', error);
