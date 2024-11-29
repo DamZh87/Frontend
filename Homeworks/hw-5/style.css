@@ -45,7 +45,11 @@
     color: rgb(0, 53, 105);
     border-radius: 0.3rem;
     padding: 1rem;
+<<<<<<< HEAD
     background-color:rgba(40, 49, 75, 0.151);
+=======
+    background-color:rgba(75, 100, 170, 0.2);
+>>>>>>> fe6b4fa2e299ac2a633a277f9e16ff04693fa1d3
   
     min-width: 30%;
     min-height: 20vh;
