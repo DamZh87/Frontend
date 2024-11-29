@@ -42,10 +42,10 @@
     flex-direction: column;
     justify-content:space-around;
     gap: 0.5rem;
-    color: rgb(221, 222, 223);
+    color: rgb(0, 53, 105);
     border-radius: 0.3rem;
     padding: 1rem;
-    background-color:rgba(36, 34, 34, 0.4);
+    background-color:rgba(40, 49, 75, 0.151);
   
     min-width: 30%;
     min-height: 20vh;
@@ -59,7 +59,7 @@
  
  .user__name {
     font-size: 1.5rem;
-    color: rgba(88, 189, 63, 0.74);
+    color: rgba(49, 49, 49, 0.815);
     text-align: center;
  }
 
