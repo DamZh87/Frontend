@@ -4,6 +4,7 @@ document.querySelector('#add_user_btn').addEventListener('click',()=>{
   document.querySelector('#add_city').value = '';
   document.querySelector('#add_company').value = '';
   document.querySelector('#add_email').value = '';
+  document.querySelector('#info').textContent = '';
 });
 
 class Request {
@@ -79,17 +80,22 @@ document.querySelector('.btn_add').addEventListener('click', async () => {
       
       const responsePost = await request.post('/users', postData);
       console.log('POST response:', responsePost);
+     
+      addUserToList(postData)
+      
       document.querySelector('#info').setAttribute('style', 'color:green')
       document.querySelector('#info').textContent = 'Успешно добавлено';
       
     } catch (error) {
       console.error('Request error:', error);
       document.querySelector('#info').setAttribute('style', 'color:red')
-      document.querySelector('#info').textContent = error('Request error:', error);;
+      document.querySelector('#info').textContent = 'Ошибка данные не добавлены';;
     }
   } else {
     
-    alert('Заполните все поля')
+    document.querySelector('#info').setAttribute('style', 'color:#ec942c')
+    document.querySelector('#info').textContent = 'Заполните все поля';
+    
   }
 });
 
@@ -147,6 +153,11 @@ function renderUserCard({
       const card = renderUserCard(item); 
       listEl.appendChild(card);
     });
+  }
+
+  function addUserToList(newUser) {
+    const card = renderUserCard(newUser);
+    listEl.appendChild(card);
   }
 
    const myModal = new HystModal({
