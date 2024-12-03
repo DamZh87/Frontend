@@ -3,8 +3,10 @@
    --back-image: url("../images/bg.png");
    --title-color: rgb(0, 137, 208);
    --card-box-shadow: 0 0 10px 3px #0a173a18;
-   --text-color: #000;
+   --text-color: #353535;
    --hover-box-shadow: 0 8px 12px rgba(28, 35, 66, 0.247);
+   --option-color: #ececec;
+   --scheme:light;
 }
 
 
