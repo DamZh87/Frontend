@@ -60,12 +60,12 @@ body {
 
 
 #shop_filter {
-  
+  color-scheme:var(--scheme);
   padding: 0.2rem;
   width: 33%;
   border-radius: 0.5rem;
 <<<<<<< HEAD
-  /* box-shadow: var(--card-box-shadow); */
+  box-shadow: var(--card-box-shadow);
 =======
   box-shadow: var(--card-box-shadow);
 >>>>>>> c793df23d703ed45e7616dc0409e321341cb896c
