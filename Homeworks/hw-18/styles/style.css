@@ -154,6 +154,11 @@ select > option {
   background-position: right 2px center;
 }
 
+.switch{
+
+  width: 30%;
+
+}
 
 @media (max-width: 600px) {
   .check_label{
