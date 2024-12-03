@@ -47,9 +47,19 @@ small, p, h1, label, .select>select {
    color: var(--text-color);
 }
 
-
-@media (max-width: 600px) {
+@media (max-width: 900px) {
    .catalog {
-      grid-template-columns: 1fr;
+     grid-template-columns: repeat(2, 1fr);
+      min-width: 50%;
    }
-}
+ }
+
+  @media (max-width: 600px) {
+    .catalog {
+       grid-template-columns: 1fr;
+       min-width: 50%;
+       
+       justify-content: center;
+    }
+ }
+
