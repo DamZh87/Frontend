@@ -59,15 +59,15 @@ body {
 }
 
 
-
 #shop_filter {
+  
   padding: 0.2rem;
   width: 33%;
   border-radius: 0.5rem;
   box-shadow: var(--card-box-shadow);
   background-color: var(--option-color);
   color: var(--text-color);
-  height: 2rem;
+  height: 28px;
 }
 
 select > option {
@@ -79,12 +79,23 @@ select > option {
   width: 220px;
 }
 
+
+.switch{
+
+  width: 30%;
+
+}
+
+
+
+
 .switcher {
   position: absolute;
   padding: 2px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   border: none;
+  
 }
 
 .switcher__legend {
@@ -154,15 +165,11 @@ select > option {
   background-position: right 2px center;
 }
 
-.switch{
 
-  width: 30%;
-
-}
 
 @media (max-width: 600px) {
   .check_label{
     width: 7.2rem;
-    text-wrap: pretty;}
+  }
   
 }
