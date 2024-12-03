@@ -64,9 +64,7 @@ body {
   padding: 0.2rem;
   width: 33%;
   border-radius: 0.5rem;
-
   /* box-shadow: var(--card-box-shadow); */
-
   background-color: var(--option-color);
   color: var(--text-color);
   height: 28px;
