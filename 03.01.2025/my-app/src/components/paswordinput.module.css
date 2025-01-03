@@ -1,0 +1,14 @@
+.container{
+    border: 1px solid black;
+    margin: 1rem;
+    max-width: 25rem;
+    display: flex; 
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 5px;
+}
+.pass_input{
+    height: 2rem;
+    align-self: center;
+}
