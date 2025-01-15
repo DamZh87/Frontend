@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  top: 0;
+  position: sticky;
+  border-bottom: 2px solid #ffffff;
+  background-color: #070a389f;
+  z-index: 10;
+  backdrop-filter: blur(15px);
+  height: 7vh;
+  margin-bottom: 2rem;
+ 
+}

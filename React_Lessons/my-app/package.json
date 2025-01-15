@@ -1,6 +1,7 @@
 {
   "name": "n30-online",
   "version": "0.1.0",
+  "homepage": "https://damzh87.github.io/Frontend/React_Lessons/my-app/build/",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
@@ -32,4 +33,7 @@
       "last 1 safari version"
     ]
   }
+  
 }
+
+
